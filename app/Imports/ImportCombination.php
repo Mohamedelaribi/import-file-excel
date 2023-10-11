@@ -14,6 +14,7 @@ class ImportCombination implements ToModel
     }
     public function model(array $row)
     {
+        // dd($this->appareil);
         $checkExistingAppareil = $this->appareil->where('serial_number', $row['0'])->first();
 
         $sim = $this->appareil->where('serial_number', $row['1'])->first();
