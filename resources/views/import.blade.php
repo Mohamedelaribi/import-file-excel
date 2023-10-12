@@ -68,7 +68,25 @@
                 @csrf
                 <input type="file" name="file" class="form-control">
                 <br>
-                <button class="btn btn-success">Import appareils Data</button>
+                <button class="btn btn-success">Import appareils with combination Data</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="card bg-light mt-3">
+        <div class="card-header">
+            import Tasks
+        </div>
+        <div class="card-body">
+            <form action="{{ route('import-tasks') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <input type="file" name="file" class="form-control">
+                <br>
+                <button class="btn btn-success">Import Tasks Data</button>
             </form>
 
         </div>

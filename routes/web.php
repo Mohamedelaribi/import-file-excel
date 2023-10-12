@@ -3,6 +3,7 @@
 use App\Http\Controllers\ClientImportController;
 use App\Http\Controllers\ImportAppareilCombination;
 use App\Http\Controllers\ImportAppareilsController;
+use App\Http\Controllers\ImportTasksControler;
 use App\Http\Controllers\ImportVehiculesController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,3 +29,4 @@ Route::post('/import-clients', [ClientImportController::class, 'importClient'])-
 Route::post('/import/vehicules', [ImportVehiculesController::class, 'import'])->name('import-Vehicules');
 Route::post('/import/appareils', [ImportAppareilsController::class, 'import'])->name('import-appareils');
 Route::post('/import/appareils-combination', [ImportAppareilCombination::class, 'import'])->name('import-appareils-combination');
+Route::post('/import-tasks', [ImportTasksControler::class, 'import'])->name('import-tasks');
